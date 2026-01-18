@@ -5,6 +5,15 @@ export type TaskStatus = 'OPEN' | 'IN_PROGRESS' | 'COMPLETED' | 'CLOSED';
 
 // --- NEW INTERFACES FOR LEARNING ---
 
+export interface Tool {
+    id: string;
+    name: string;
+    category: string;
+    icon: string;
+    description: string;
+}
+
+
 export interface Sector {
     id: string;
     slug: string;
@@ -110,6 +119,16 @@ export interface MatchResult {
         isPositive: boolean;
     }[];
 }
+
+export const MOCK_TOOLS: Tool[] = [
+    { id: "t1", name: "Figma", category: "Design", icon: "Figma", description: "Interface design tool" },
+    { id: "t2", name: "VS Code", category: "Development", icon: "Code", description: "Code editor" },
+    { id: "t3", name: "Notion", category: "Productivity", icon: "FileText", description: "Workspace" },
+    { id: "t4", name: "Linear", category: "Management", icon: "ListTodo", description: "Issue tracking" },
+    { id: "t5", name: "Docker", category: "DevOps", icon: "Container", description: "Containerization" },
+    { id: "t6", name: "Kubernetes", category: "DevOps", icon: "Server", description: "Orchestration" },
+];
+
 
 // --- MOCK SECTORS ---
 export const MOCK_SECTORS: Sector[] = [
@@ -328,6 +347,50 @@ export const MOCK_EXPERTS: Expert[] = [
         specialties: ["A/B Testing", "Pricing", "Causal ML"],
         sectorIds: ["s5"],
         yearsExperience: 8
+    },
+    {
+        id: "e13",
+        name: "Yuki Tanaka",
+        title: "Principal Artist",
+        company: "Pixar",
+        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop",
+        bio: "Character shading and lighting expert. Worked on 3 Academy Award winning films.",
+        specialties: ["Shading", "Lighting", "RenderMan"],
+        sectorIds: ["s1"],
+        yearsExperience: 14
+    },
+    {
+        id: "e14",
+        name: "Omar Farooq",
+        title: "Cloud Architect",
+        company: "Amazon AWS",
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+        bio: "Designing serverless architectures for enterprise clients. AWS Community Hero.",
+        specialties: ["AWS Lambda", "DynamoDB", "System Design"],
+        sectorIds: ["s8"],
+        yearsExperience: 9
+    },
+    {
+        id: "e15",
+        name: "Sofia Rodriguez",
+        title: "UX Research Manager",
+        company: "Uber",
+        avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop",
+        bio: "Leading global research studies to improve driver and rider experiences across 20 markets.",
+        specialties: ["International Research", "Ethnography", "Strategy"],
+        sectorIds: ["s7"],
+        yearsExperience: 11
+    },
+    {
+        id: "e16",
+        name: "Kenji Sato",
+        title: "Frontend Architect",
+        company: "Stripe",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop",
+        bio: "Building the design system and component library used by all Stripe engineers.",
+        specialties: ["Design Systems", "React", "Accessibility"],
+        sectorIds: ["s3"],
+        yearsExperience: 12
     }
 ];
 
@@ -670,6 +733,46 @@ export const MOCK_CANDIDATES: User[] = [
         verifiedSkills: ["User Interviews", "Surveys", "Usability Testing", "Figma"],
         bio: "Uncovering user needs to drive product decisions.",
         location: "Chicago, USA"
+    },
+    {
+        id: "u13",
+        name: "Aisha Mohammed",
+        role: "CANDIDATE",
+        avatar: "https://images.unsplash.com/photo-1589156280159-27698a70f29e?w=150&h=150&fit=crop",
+        headline: "Cybersecurity Analyst | InfoSec & PenTesting",
+        verifiedSkills: ["Network Security", "Python", "Linux", "Ethical Hacking"],
+        bio: "Securing digital assets and preventing breaches. Certified Ethical Hacker.",
+        location: "London, UK"
+    },
+    {
+        id: "u14",
+        name: "Liam O'Connor",
+        role: "CANDIDATE",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop",
+        headline: "Mobile Engineer | Swift & SwiftUI",
+        verifiedSkills: ["iOS", "Swift", "Combine", "Core Data"],
+        bio: "Building fluid and performant iOS experiences. App Store featured developer.",
+        location: "Dublin, Ireland"
+    },
+    {
+        id: "u15",
+        name: "Wei Chen",
+        role: "CANDIDATE",
+        avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop",
+        headline: "Game Developer | Unity & C#",
+        verifiedSkills: ["Unity", "C#", "3D Math", "Shader Graph"],
+        bio: "Creating immersive 3D worlds and interactive gameplay mechanics.",
+        location: "Vancouver, Canada"
+    },
+    {
+        id: "u16",
+        name: "Zoe Washington",
+        role: "CANDIDATE",
+        avatar: "https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?w=150&h=150&fit=crop",
+        headline: "Technical Writer | Docs & APIs",
+        verifiedSkills: ["Markdown", "Git", "API Documentation", "Copy Editing"],
+        bio: "Translating complex code into clear, developer-friendly documentation.",
+        location: "Remote (USA)"
     }
 ];
 

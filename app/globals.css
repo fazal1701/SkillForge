@@ -129,6 +129,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -136,16 +137,21 @@
 
 .theme-learn {
   --primary: var(--learn-accent);
+  --primary-foreground: oklch(0.985 0 0);
+  /* White text on indigo */
   --ring: var(--learn-accent);
 }
 
 .theme-tasks {
   --primary: var(--tasks-accent);
+  --primary-foreground: oklch(0.985 0 0);
+  /* White text on emerald */
   --ring: var(--tasks-accent);
 }
 
 .theme-employers {
   --primary: var(--employers-accent);
+  --primary-foreground: oklch(0.985 0 0);
+  /* White text on violet */
   --ring: var(--employers-accent);
 }
-
